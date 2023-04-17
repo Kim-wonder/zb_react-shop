@@ -15,4 +15,22 @@ $main_color_n_02: rgb(23, 26, 31);
 // Common
 $common_btn: rgba(51, 61, 73, 0.929);
 $common_btn_hover: rgba(35, 45, 58, 0.929);
-$shadow: 2px 2px 3px rgba(26, 27, 33, 0.7);
+$shadow: 1px 1px 5px rgba(110, 110, 111, 0.449);
+
+@mixin lightTheme {
+  $MainDark: #f3f0e9;
+  $MainBGC: #fffdf8;
+  $FontIcon: #18172f;
+  $CartBtnBorder: #18172f;
+  $CarouselBtn: rgba(23, 26, 31, 0.2);
+  $Mode_Icon: "/assets/moon-regular.svg";
+}
+
+@mixin darkTheme {
+  $MainDark: rgb(23, 26, 31);
+  $MainBGC: rgb(35, 45, 58);
+  $FontIcon: #cfcfcf;
+  $CartBtnBorder: #cfcfcf;
+  $CarouselBtn: rgba(11, 16, 23, 0.2);
+  $Mode_Icon: "/assets/sun-regular.svg";
+}

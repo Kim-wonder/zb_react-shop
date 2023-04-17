@@ -11,8 +11,10 @@ import Button_ from "./BaroButton";
 export default function CarouselView() {
   return (
     <div className="carousel-container">
+      <div className="carousel-header"></div>
       <Carousel autoPlay={true} infiniteLoop={true}>
         <div className="ad">
+          <img src={fashion} />
           <div className="ad_ment">
             <p className="title">물 빠진 청바지!</p>
             <p className="sub-title">
@@ -22,29 +24,28 @@ export default function CarouselView() {
               <Button_></Button_>
             </Link>
           </div>
-          <img src={fashion} />
         </div>
         <div className="ad">
-          <div className="ad_ment">
-            <p className="title">신속한 업무처리!</p>
-            <p className="sub-title">다양한 디지털 상품을 둘러보세요.</p>
-            <Link to="/notfound">
-              <Button_></Button_>
-            </Link>
-          </div>
           <img src={grocery} />
-        </div>
-        <div className="ad">
           <div className="ad_ment">
             <p className="title">신선한 식품!</p>
             <p className="sub-title">
               농작 직배송으로 더욱 신선한 식품을 만나보세요.
             </p>
+            <Link to="/notfound">
+              <Button_></Button_>
+            </Link>
+          </div>
+        </div>
+        <div className="ad">
+          <img src={digital} />
+          <div className="ad_ment">
+            <p className="title">신속한 업무처리!</p>
+            <p className="sub-title">다양한 디지털 상품을 둘러보세요.</p>
             <Link to="/digital">
               <Button_></Button_>
             </Link>
           </div>
-          <img src={digital} />
         </div>
       </Carousel>
     </div>

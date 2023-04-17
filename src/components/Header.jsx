@@ -33,40 +33,45 @@ export default function Header() {
   // font-size: 20px;
 
   return (
-    <div className="header">
-      {open ? (
-        <div className="side" onClick={toggleSide}>
-          {close ? true : <MainSlide></MainSlide>}
-        </div>
-      ) : (
-        false
-      )}
+    <div className="topHeader">
+      <div className="header">
+        {open ? (
+          <div className="side" onClick={toggleSide}>
+            {close ? true : <MainSlide></MainSlide>}
+          </div>
+        ) : (
+          false
+        )}
 
-      <div className="header-left">
-        <div className="side-bar" onClick={handleClick}>
-          <img src={bar} className="bar" />
+        <div className="header-left">
+          <div className="side-bar" onClick={handleClick}>
+            <img src={bar} className="bar" />
+          </div>
+          <Link to="/" className="header-logo">
+            React Shop
+          </Link>
+          <Link to="/fashion" className="header-item">
+            패션
+          </Link>
+          <Link to="/accessory" className="header-item">
+            액세서리
+          </Link>
+          <Link to="/digital" className="header-item">
+            디지털
+          </Link>
         </div>
-        <Link to="/" className="header-logo">
-          React Shop
-        </Link>
-        <Link to="/fashion" className="header-item">
-          패션
-        </Link>
-        <Link to="/accessory" className="header-item">
-          액세서리
-        </Link>
-        <Link to="/digital" className="header-item">
-          디지털
-        </Link>
-      </div>
-      <div className="header-right">
-        <a>
-          <img src={moon} className="header_icon theme_dark_mode " />
-        </a>
-        <input className="header_input theme_dark_input " placeholder="검색" />
-        <a>
-          <img src={cart} className="header_icon theme_dark_cart " />
-        </a>
+        <div className="header-right">
+          <a>
+            <img src={moon} className="header_icon theme_dark_mode " />
+          </a>
+          <input
+            className="header_input theme_dark_input "
+            placeholder="검색"
+          />
+          <a>
+            <img src={cart} className="header_icon theme_dark_cart " />
+          </a>
+        </div>
       </div>
     </div>
   );
