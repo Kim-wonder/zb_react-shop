@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import digital from "../assets/img_shop_digital.jpeg";
 import fashion from "../assets/img_shop_fashion.jpeg";
 import grocery from "../assets/img_shop_grocery.jpeg";
-import Button_ from "../components/BaroButton";
+import Button_ from "./BaroButton";
 
 export default function CarouselView() {
   return (
