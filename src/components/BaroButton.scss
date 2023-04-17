@@ -1,0 +1,18 @@
+@import "../variable.scss";
+
+.btn {
+  width: 108px;
+  height: 38px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: $shadow;
+  color: #ffff;
+  background-color: $common_btn;
+}
+.btn:hover {
+  background-color: $common_btn_hover;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
