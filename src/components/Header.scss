@@ -4,19 +4,24 @@
   position: fixed;
   top: 0;
   z-index: 1;
-}
-
-.header {
   width: 100vw;
   height: 64px;
   background: $main_color_l_01;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  max-width: 1000px;
+  width: 100vw;
+  height: 64px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: $shadow;
-
   position: absolute;
-
+  margin: 0 auto;
   .side {
     display: block;
     position: absolute;

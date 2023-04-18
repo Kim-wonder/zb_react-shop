@@ -1,0 +1,18 @@
+@import "../variable.scss";
+
+.cart-btn {
+  width: 100px;
+  height: 35px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: $shadow;
+  color: #fff;
+  background-color: #5f1fc5;
+}
+.cart-btn:hover {
+  background-color: #6253ea;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}

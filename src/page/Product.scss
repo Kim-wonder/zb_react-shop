@@ -1,0 +1,45 @@
+@import "../variable.scss";
+
+.headBox {
+  height: 65px;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.info-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+}
+.item-Img {
+  border: 1px solid blue;
+  width: 90%;
+  height: 200px;
+  padding: 10px;
+}
+.itemDescription {
+  border: 1px solid green;
+  height: 200px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  gap: 10px;
+}
+.title {
+  font-size: 15px;
+  font-weight: 600;
+}
+.star-rating {
+}
+.price {
+  font-size: 24px;
+  font-weight: 400;
+}
+.btn-box {
+  display: flex;
+  gap: 10px;
+}

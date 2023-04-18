@@ -1,3 +1,115 @@
-* {
-  color: red;
+@import "../variable.scss";
+
+.headBox {
+  height: 65px;
+}
+.topNav {
+  font-size: 10px;
+  font-weight: 300;
+  margin: 20px 0 50px 10px;
+}
+.cateContainer {
+  // height: auto;
+  // border: 1px solid red;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+}
+.pageName {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px;
+  // @include lightTheme($MainDark);
+}
+.itemContainers {
+  // border: 1px solid blue;
+  flex-wrap: wrap;
+  width: 940px;
+  // height: 350px;
+  display: flex;
+  gap: 15px;
+  // justify-content: center;
+}
+.itemCards {
+  width: 220px;
+  height: 300px;
+  border: 1px solid $main_color_l_op;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  .item {
+    width: 220px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .itemImgBoxs {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .itemImgs {
+      width: 80px;
+      height: 110px;
+      transform: scale(1);
+      transition: all 0.4s ease-out;
+      -webkit-user-drag: none;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.4s ease-out;
+        -webkit-user-drag: none;
+      }
+    }
+  }
+  .itemDescripts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: $main_color_l_op;
+    width: 300px;
+    height: 222px;
+    .itemTitles,
+    .itemPrices {
+      color: $main_color_n_01;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      width: 180px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .itemTitles {
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .cateContainer {
+    .itemContainers {
+      flex-wrap: wrap;
+      width: 300px;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+@media screen and (min-width: 631px) and (max-width: 1080px) {
+  .cateContainer {
+    .itemContainers {
+      flex-wrap: wrap;
+      width: 600px;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 }

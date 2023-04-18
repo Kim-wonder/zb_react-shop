@@ -34,15 +34,15 @@ export default function Header() {
 
   return (
     <div className="topHeader">
-      <div className="header">
-        {open ? (
-          <div className="side" onClick={toggleSide}>
-            {close ? true : <MainSlide></MainSlide>}
-          </div>
-        ) : (
-          false
-        )}
+      {open ? (
+        <div className="side" onClick={toggleSide}>
+          {close ? true : <MainSlide></MainSlide>}
+        </div>
+      ) : (
+        false
+      )}
 
+      <div className="header">
         <div className="header-left">
           <div className="side-bar" onClick={handleClick}>
             <img src={bar} className="bar" />

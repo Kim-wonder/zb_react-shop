@@ -17,7 +17,7 @@ export default function MainProduct() {
               (item, i) =>
                 i < 4 && (
                   <div key={item.id} className="itemCard">
-                    <Link to={`product/${item.id}`} className="item">
+                    <Link to={`/product/${item.id}`} className="item">
                       <div className="itemImgBox">
                         <img src={item.image} className="itemImg" />
                       </div>
@@ -40,7 +40,7 @@ export default function MainProduct() {
               (item, i) =>
                 i < 4 && (
                   <div key={item.id} className="itemCard">
-                    <Link to={`product/${item.id}`} className="item">
+                    <Link to={`/product/${item.id}`} className="item">
                       <div className="itemImgBox">
                         <img src={item.image} className="itemImg" />
                       </div>
@@ -63,7 +63,7 @@ export default function MainProduct() {
               (item, i) =>
                 i < 4 && (
                   <div key={item.id} className="itemCard">
-                    <Link to={`product/${item.id}`} className="item">
+                    <Link to={`/product/${item.id}`} className="item">
                       <div className="itemImgBox">
                         <img src={item.image} className="itemImg" />
                       </div>

@@ -1,5 +1,14 @@
 import React from "react";
+import "./DatailItem.scss";
+import { useParams, useNavigate } from "react-router-dom";
+import { DataContext } from "../store/Data";
 
 export default function DatailItem() {
-  return <div>DatailItem</div>;
+  const params = useParams();
+  console.log(params);
+  return (
+    <>
+      <div>{params}ddd</div>
+    </>
+  );
 }
