@@ -6,24 +6,33 @@ export default function ThemeToogle() {
   const [light, setLight] = useState(true);
   const [dark, setDark] = useState(false);
 
-  const handleSwitchToogle = () => {
+  const handleSwitchToogle = ({ target }) => {
+    console.log(target);
     if (!light) {
       setLight(true);
-      setLight(false);
+      setDark(false);
     } else {
       setLight(false);
-      setLight(true);
+      setDark(true);
     }
   };
   return (
     <div>
-      {light ? (
+      {!light ? (
         <a>
-          <img src={sun} className="header_icon theme_dark_mode " />
+          <img
+            src={sun}
+            onClick={() => handleSwitchToogle}
+            className="header_icon theme_dark_mode "
+          />
         </a>
       ) : (
         <a>
-          <img src={moon} className="header_icon theme_dark_mode " />
+          <img
+            src={moon}
+            onClick={() => handleSwitchToogle}
+            className="header_icon theme_dark_mode "
+          />
         </a>
       )}
     </div>

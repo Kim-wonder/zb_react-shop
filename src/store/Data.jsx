@@ -14,6 +14,7 @@ export default function Data(props) {
 
     shopDate().then((res) => {
       setData(res);
+      localStorage.setItem("data", JSON.stringify(res));
     });
   }, []);
 

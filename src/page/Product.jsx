@@ -1,10 +1,8 @@
-import React, { useContext, useState, useEffect, useMemo } from "react";
-import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "../store/Data";
 import "./Product.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import DatailItem from "../components/DatailItem";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import PutinCart from "../components/PutinCart";
 import GotoCart from "../components/GotoCart";
@@ -12,39 +10,35 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 
 export default function Product() {
-  const [data, setData] = useState([]);
+  // const value = useContext(DataContext);
+  const value = JSON.parse(localStorage.getItem("data"));
+  const [origin, setOrigin] = useState(value);
 
-  const value = useContext(DataContext);
-  // const value = data;
   const params = useParams();
   const paramId = params.itemId;
   const itemInfo = value[paramId - 1];
-  const loca = useLocation();
-  const refer = document.referrer;
+  const title = itemInfo.title;
   const price = itemInfo.price;
   const num = Math.round(price * 1);
-  const value2 = useMemo(() => {
-    useContext(DataContext);
-  });
-  // console.log(value);
-  // console.log(itemInfo);
+
+  const getCartInfo = JSON.parse(localStorage.getItem("item")) || [];
+  const addCartInfo = (e) => {
+    // e.preventDefault();
+    // e.stopPropagation();
+    const cartInfo = {
+      title: title,
+      price: price,
+    };
+    const originalCartInfo = getCartInfo;
+    localStorage.setItem(
+      "item",
+      JSON.stringify([...originalCartInfo, cartInfo])
+    );
+  };
 
   // useEffect(() => {
-  //   useContext(DataContext);
-  // }, []);
-
-  useEffect(() => {
-    const shopDate = async () => {
-      const result = await axios.get("https://fakestoreapi.com/products");
-      console.log(result);
-      return result.data;
-    };
-
-    shopDate().then((res) => {
-      setData(res);
-    });
-  }, []);
-  console.log(data);
+  //   setOrigin(value);
+  // }, [origin]);
 
   return (
     <>
@@ -62,6 +56,10 @@ export default function Product() {
             <div className="star-rating">
               <div className="star">
                 <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
               </div>
               <div className="evalue">
                 {itemInfo.rating.rate} / {itemInfo.rating.count} 참여
@@ -69,7 +67,11 @@ export default function Product() {
             </div>
             <div className="price">$ {num}</div>
             <div className="btn-box">
-              <PutinCart></PutinCart>
+              <PutinCart
+                onClick={() => {
+                  addCartInfo();
+                }}
+              ></PutinCart>
               <GotoCart></GotoCart>
             </div>
           </div>

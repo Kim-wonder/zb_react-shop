@@ -14,13 +14,13 @@
   margin: 0 auto;
 }
 .item-Img {
-  border: 1px solid blue;
-  width: 90%;
+  // border: 1px solid blue;
+  // width: 90%;
   height: 200px;
   padding: 10px;
 }
 .itemDescription {
-  border: 1px solid green;
+  // border: 1px solid green;
   height: 200px;
   font-size: 12px;
   display: flex;
@@ -34,6 +34,9 @@
   font-weight: 600;
 }
 .star-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .price {
   font-size: 24px;

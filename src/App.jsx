@@ -17,9 +17,9 @@ function App() {
           <Route path={"/notfound"} element={<NotFound />}></Route>
           <Route path={"/cart"} element={<Cart />}></Route>
           <Route path={"/fashion"} element={<Fashion />}></Route>
+          <Route path="product/:itemId" element={<Product />}></Route>
           <Route path={"/accessory"} element={<Accessory />}></Route>
           <Route path={"/digital"} element={<Digital />}></Route>
-          <Route path={"/product/:itemId"} element={<Product />}></Route>
         </Routes>
       </BrowserRouter>
     </Data>

@@ -27,10 +27,7 @@ export default function Fashion() {
         <div className="itemContainers">
           {products.map((item, i) => (
             <div key={item.id} className="itemCards">
-              <div
-                onClick={() => navigate(`/product/${item.id}`)}
-                className="item"
-              >
+              <Link to={`/product/${item.id}`} className="item">
                 <div className="itemImgBoxs">
                   <img src={item.image} className="itemImgs" />
                 </div>
@@ -38,16 +35,7 @@ export default function Fashion() {
                   <span className="itemTitles">{item.title}</span>
                   <span className="itemPrices">$ {item.price}</span>
                 </label>
-              </div>
-              {/* <Link to={`/product/${item.id}`} className="item">
-                <div className="itemImgBoxs">
-                  <img src={item.image} className="itemImgs" />
-                </div>
-                <label className="itemDescripts">
-                  <span className="itemTitles">{item.title}</span>
-                  <span className="itemPrices">$ {item.price}</span>
-                </label>
-              </Link> */}
+              </Link>
             </div>
           ))}
         </div>
