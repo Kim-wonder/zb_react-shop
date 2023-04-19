@@ -12,6 +12,16 @@
   justify-content: center;
 }
 
+.side {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  // z-index: 5;
+}
 .header {
   max-width: 1000px;
   width: 100vw;
@@ -22,15 +32,6 @@
   align-items: center;
   position: absolute;
   margin: 0 auto;
-  .side {
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
-  }
 
   .header-left {
     display: flex;

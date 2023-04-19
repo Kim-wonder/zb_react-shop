@@ -1,0 +1,41 @@
+@import "../variable.scss";
+
+.headBox {
+  height: 65px;
+}
+.wrapper2 {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.notFound {
+  font-size: 100px;
+  font-weight: 700;
+  color: $common_btn;
+}
+.goToHome {
+  font-size: 20px;
+  font-weight: 600;
+  width: 140px;
+  height: 40px;
+  color: #fff;
+  background-color: #54d1a5;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.goToHome:hover {
+  background-color: #545655;
+  box-shadow: $shadow;
+}
+@media screen and (max-width: 768px) {
+  .wrapper2 {
+    transform: scale(0.8);
+  }
+}

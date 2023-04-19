@@ -36,10 +36,6 @@ export default function Product() {
     );
   };
 
-  // useEffect(() => {
-  //   setOrigin(value);
-  // }, [origin]);
-
   return (
     <>
       <Header></Header>

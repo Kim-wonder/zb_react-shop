@@ -6,6 +6,7 @@
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
+  height: 70vh;
 }
 .info-box {
   display: flex;
@@ -45,4 +46,16 @@
 .btn-box {
   display: flex;
   gap: 10px;
+}
+@media screen and (max-width: 630px) {
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 30px;
+  }
+}
+@media screen and (min-width: 631px) and (max-width: 1080px) {
 }

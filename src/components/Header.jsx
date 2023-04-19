@@ -10,14 +10,13 @@ import bar from "../assets/bars-solid.svg";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [close, setClose] = useState(true);
-  const toggleSide = () => {
-    setClose(true);
-    setOpen(false);
-  };
-
   const handleClick = () => {
     setOpen(true);
     setClose(false);
+  };
+  const toggleSide = () => {
+    setClose(true);
+    setOpen(false);
   };
 
   //다크모드 아이콘 변경
